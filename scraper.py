@@ -6,8 +6,8 @@ from fake_useragent import UserAgent
 
 domain = "http://jhu.esuds.net/RoomStatus/machineStatus.i?bottomLocationId="
 
-def getUrl(buttomLocationId):
-    soup = queryEsuds(buttomLocationId)
+def getUrl(hall_id):
+    soup = queryEsuds(hall_id)
     machines = parseEsuds(soup)
     if (machines == None):
         return None
@@ -28,13 +28,13 @@ def parseEsuds(soup):
                 if len(td.get_text().strip()) > 0:
                     machine[types[index]] = td.get_text().strip()
                     index += 1
-            if len(machine) > 0:
+            if len(machine) >= 2:
                 result.append(machine)
 
     return result
 
-def queryEsuds(buttomLocationId):
-    queryUrl = domain + str(buttomLocationId)
+def queryEsuds(hall_id):
+    queryUrl = domain + str(hall_id)
     soup = getWebpageSource(queryUrl)
     return soup
 
