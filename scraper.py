@@ -14,9 +14,11 @@ def getUrl(hall_id):
     return machines
 
 def parseEsuds(soup):
-    table = soup.findAll("table", {"class": "room_status"})[0]
-    tableHead = 0
     result = []
+
+    table = soup.find("table", {"class": "room_status"})
+    tableHead = 0
+
     for tr in table.find_all("tr"):
         if tableHead == 0:
             tableHead = 1
