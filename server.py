@@ -40,8 +40,13 @@ class GetHopkins(Resource):
     def get(self):
         return hopkins
 
+class GetHopkinsHall(Resource):
+    def get(self, hall_name):
+        return hopkins[hall_name]
+
 api.add_resource(GetHall, '/<string:hall_id>')
 api.add_resource(GetHopkins, '/hopkins')
+api.add_resource(GetHopkinsHall, '/hopkins/<string:hall_name>')
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
