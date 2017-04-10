@@ -4,7 +4,6 @@ import sys
 from bs4 import BeautifulSoup
 from fake_useragent import UserAgent
 import time
-import pyrebase
 
 domain = "http://jhu.esuds.net/RoomStatus/machineStatus.i?bottomLocationId="
 
