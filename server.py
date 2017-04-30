@@ -1,60 +1,91 @@
 from flask import Flask
 from flask_restful import Resource, Api
-from scraper import getUrl
+from scraper import scrape
 import os
+import sys
 import threading
+import json
 
 app = Flask(__name__)
 api = Api(app)
 
+with open('asi.json') as json_data:
+    asi_id = json.load(json_data)
 
-idList = {
-    'AMR-A': [2829],
-    'AMR-B': [2831],
-    'AMR-I': [2824],
-    'AMR-II': [2826, 2827],
-    'bradford': [2835],
-    'commons': [2841],
-    'mccoy': [1015524, 1015507],
-    'wolman': [2839],
-    'rogers': [2074912],
-}
+with open('hopkins.json') as json_data:
+    hopkins_id = json.load(json_data)
 
-hopkins = {}
-def scrapeHopkins():
-    for hall, ids in idList.items():
-        machines = []
-        for hall_id in ids:
-            machines += getUrl(hall_id)
-        hopkins[hall] = machines
+all_data = {}
+def scrapeAll():
+    for school, campuses in asi_id.items():
+        if school not in all_data:
+            all_data[school] = {}
+        for campus, halls in campuses.items():
+            if campus not in all_data[school]:
+                all_data[school][campus] = {}
+            for hall, ids in halls.items():
+                machines = []
+                for hall_id in ids:
+                    machines += scrape("asi", hall_id)
+                all_data[school][campus][hall] = machines
 
-scrapeHopkins()
-timer = threading.Timer(30.0, scrapeHopkins)
+    for school, campuses in hopkins_id.items():
+        if school not in all_data:
+            all_data[school] = {}
+        for campus, halls in campuses.items():
+            if campus not in all_data[school]:
+                all_data[school][campus] = {}
+            for hall, ids in halls.items():
+                machines = []
+                for hall_id in ids:
+                    machines += scrape("jhu", hall_id)
+                all_data[school][campus][hall] = machines
+
+scrapeAll()
+
+timer = threading.Timer(60.0, scrapeAll)
 timer.start()
 
+class GetHallByID(Resource):
+    def get(self, root, hall_id):
+        return scrape(root, hall_id)
+
+class GetSchool(Resource):
+    def get(self, school_name):
+        try:
+            return all_data[school_name]
+        except:
+            print("Unexpected error:", sys.exc_info()[0])
+            return {}
+
+class GetCampus(Resource):
+    def get(self, school_name, campus_name):
+        try:
+            return all_data[school_name][campus_name]
+        except:
+            print("Unexpected error:", sys.exc_info()[0])
+            return {}
+
 class GetHall(Resource):
-    def get(self, hall_id):
-        return getUrl(hall_id)
+    def get(self, school_name, campus_name, hall_name):
+        try:
+            return all_data[school_name][campus_name][hall_name]
+        except:
+            print("Unexpected error:", sys.exc_info()[0])
+            return {}
 
-class GetHopkins(Resource):
-    def get(self):
-        return hopkins
-
-class GetHopkinsHall(Resource):
-    def get(self, hall_name):
-        return hopkins[hall_name]
-
-class GetHopkinsHallMachine(Resource):
-    def get(self, hall_name, machine_id):
-        for machine in hopkins[hall_name]:
+class GetHallMachine(Resource):
+    def get(self, school_name, campus_name, hall_name, machine_id):
+        for machine in hopkins[hall_name][campus_name]:
             if machine["id"] == machine_id:
                 return machine
         return {}
 
-api.add_resource(GetHall, '/<string:hall_id>')
-api.add_resource(GetHopkins, '/hopkins')
-api.add_resource(GetHopkinsHall, '/hopkins/<string:hall_name>')
-api.add_resource(GetHopkinsHallMachine, '/hopkins/<string:hall_name>/<string:machine_id>')
+api.add_resource(GetHallByID, '/getHallByID/<string:root>/<string:hall_id>')
+api.add_resource(GetSchool, '/<string:school_name>')
+api.add_resource(GetCampus, '/<string:school_name>/<string:campus_name>')
+api.add_resource(GetHall, '/<string:school_name>/<string:campus_name>/<string:hall_name>')
+api.add_resource(GetHallMachine, '/<string:school_name>/<string:campus_name>/<string:hall_name>/<string:machine_id>')
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))

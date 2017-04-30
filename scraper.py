@@ -5,10 +5,13 @@ from bs4 import BeautifulSoup
 from fake_useragent import UserAgent
 import time
 
-domain = "http://jhu.esuds.net/RoomStatus/machineStatus.i?bottomLocationId="
+domain = ".esuds.net/RoomStatus/machineStatus.i?bottomLocationId="
 
-def getUrl(hall_id):
-    soup = queryEsuds(hall_id)
+def scrape(root, hall_id):
+    return getMachines("http://" + root + domain + str(hall_id))
+
+def getMachines(queryUrl):
+    soup = getWebpageSource(queryUrl)
     machines = parseEsuds(soup)
     if (machines == None):
         return None
@@ -36,37 +39,9 @@ def parseEsuds(soup):
 
     return result
 
-def queryEsuds(hall_id):
-    queryUrl = domain + str(hall_id)
-    soup = getWebpageSource(queryUrl)
-    return soup
-
 # gets a BeautifulSoup object of the given url's source
 def getWebpageSource(url):
     ua = UserAgent()
     headers = { "Connection": "close", "User-Agent": ua.random }
     r = requests.get(url, headers = headers, timeout = 20)
     return BeautifulSoup(r.text, "html.parser")
-
-# starttime=time.time()
-# idList = {
-#     'AMR-A': [2829],
-#     'AMR-B': [2831],
-#     'AMR-I': [2824],
-#     'AMR-II': [2826, 2827],
-#     'bradford': [2835],
-#     'commons': [2841],
-#     'mccoy': [1015524, 1015507],
-#     'wolman': [2839],
-#     'rogers': [2074912],
-# }
-#
-# hopkins = {}
-# while True:
-#     for hall, ids in idList.items():
-#         machines = []
-#         for hall_id in ids:
-#             machines += getUrl(hall_id)
-#         hopkins["hall"] = machines
-#
-#     time.sleep(30.0 - ((time.time() - starttime) % 30.0))

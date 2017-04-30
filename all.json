@@ -1,0 +1,628 @@
+{
+    "Binghamton University": {
+        "College in the Woods": {
+            "Cayuga": [
+                1008716
+            ],
+            "Mohawk": [
+                1008720
+            ],
+            "Oneida": [
+                1008712
+            ],
+            "Onondaga": [
+                1008718
+            ],
+            "Seneca": [
+                1008714
+            ]
+        },
+        "Dickinson": {
+            "Digman": [
+                2055184
+            ],
+            "Johnson-Bing": [
+                2053282
+            ],
+            "OConnor": [
+                2052781
+            ],
+            "Old Digman": [
+                2084356
+            ],
+            "Rafuse": [
+                2052918
+            ]
+        },
+        "Hinman": {
+            "Cleveland": [
+                7205
+            ],
+            "Hughes": [
+                1008728
+            ],
+            "Lehman": [
+                1008732
+            ],
+            "Roosevelt": [
+                1008722
+            ],
+            "Smith Hall": [
+                1008725
+            ]
+        },
+        "Mountainview": {
+            "Cascade": [
+                2043855
+            ],
+            "Hunter": [
+                2043879
+            ],
+            "Marcy": [
+                2044115
+            ],
+            "Windham": [
+                2043914
+            ]
+        },
+        "Newing": {
+            "Bingham": [
+                1033795
+            ],
+            "Broome": [
+                1040623
+            ],
+            "Delaware": [
+                1040605
+            ],
+            "Endicott": [
+                1040646
+            ]
+        },
+        "Susquehanna Graduate Community": {
+            "Brandywine": [
+                1013011
+            ],
+            "Choconut": [
+                1013008
+            ],
+            "Glenwood": [
+                1012989
+            ],
+            "Nanticoke": [
+                1012991
+            ]
+        }
+    },
+    "Bluffton University": {
+        "Bluffton": {
+            "Hirschey Annex": [
+                1040047
+            ],
+            "Neufeld Hall": [
+                716
+            ],
+            "Ramseyer Hall": [
+                1807
+            ],
+            "Ropp Hall": [
+                877
+            ]
+        }
+    },
+    "Case Western Reserve University": {
+        "Case Western Main Campus": {
+            "Alumni": [
+                1429
+            ],
+            "Clarke Tower": [
+                1398
+            ],
+            "Cutler": [
+                1405
+            ],
+            "Cutter": [
+                1423
+            ],
+            "Glaser": [
+                4193
+            ],
+            "Hitchcock": [
+                1403
+            ],
+            "Howe": [
+                1431
+            ],
+            "Kusch": [
+                4188
+            ],
+            "Michelson": [
+                4191
+            ],
+            "Norton": [
+                1409
+            ],
+            "Pierce": [
+                1407
+            ],
+            "Raymond": [
+                1415
+            ],
+            "Sherman": [
+                1413
+            ],
+            "Smith": [
+                1421
+            ],
+            "Staley": [
+                1427
+            ],
+            "Storrs": [
+                1400
+            ],
+            "Taft": [
+                1419
+            ],
+            "Taplin": [
+                1417
+            ],
+            "Tippit": [
+                1425
+            ],
+            "Tyler": [
+                1411
+            ],
+            "Village at 115": [
+                1443
+            ]
+        }
+    },
+    "Cedarville University": {
+        "Cedarville": {
+            "Brock": [
+                448
+            ],
+            "Carr": [
+                6646
+            ],
+            "Johnson": [
+                389
+            ],
+            "Lawlor": [
+                408
+            ],
+            "Maddox-Cedarville": [
+                452
+            ],
+            "Marshall": [
+                6644
+            ],
+            "McChesney": [
+                406
+            ],
+            "McKinney": [
+                404
+            ],
+            "Murphy": [
+                387
+            ],
+            "Printy": [
+                400
+            ],
+            "Rickard": [
+                402
+            ],
+            "St Clair": [
+                410
+            ],
+            "Willetts Central": [
+                392
+            ],
+            "Willetts North": [
+                397
+            ],
+            "Willetts South": [
+                376
+            ]
+        }
+    },
+    "Centenary College": {
+        "Centenary NJ Main Campus": {
+            "Anderson-Cent.": [
+                1013911
+            ],
+            "Bennett Smith 1": [
+                1013915
+            ],
+            "Bennett Smith 3": [
+                1013918
+            ],
+            "Founders Hall 1": [
+                1013892
+            ],
+            "Founders Hall 3": [
+                1013893
+            ],
+            "Lotte": [
+                1013889
+            ],
+            "Reeves": [
+                1013888
+            ],
+            "Smith-Cent.": [
+                1013906
+            ],
+            "Van Winkle": [
+                1013909
+            ],
+            "Washabaugh": [
+                1013891
+            ]
+        }
+    },
+    "Columbus College of Art & Design": {
+        "CCAD": {
+            "Design Square": [
+                1026690
+            ],
+            "Schottenstein": [
+                1026692
+            ]
+        }
+    },
+    "Dominican College": {
+        "Dominican College Main Campus": {
+            "Guzman": [
+                1009563
+            ],
+            "Hertel Hall": [
+                1009663
+            ],
+            "Rosary Hall": [
+                1009665
+            ]
+        }
+    },
+    "Georgia State University": {
+        "Georgia Main Campus": {
+            "COMMONS A": [
+                7047
+            ],
+            "COMMONS B": [
+                7049
+            ],
+            "COMMONS C": [
+                7051
+            ],
+            "COMMONS D": [
+                1007599
+            ],
+            "Lofts": [
+                1008983
+            ]
+        }
+    },
+    "Hunter College": {
+        "Brookdale Center": {
+            "OneCard A (Dorm)": [
+                1008881
+            ],
+            "OneCard B (Dorm)": [
+                1008882
+            ]
+        }
+    },
+    "Miami University": {
+        "Miami Main Campus": {
+            "Anderson": [
+                4806
+            ],
+            "Bishop": [
+                4825
+            ],
+            "Blanchard": [
+                4594
+            ],
+            "Brandon": [
+                4789
+            ],
+            "Clawson": [
+                4878
+            ],
+            "Collins": [
+                4888
+            ],
+            "Commons": [
+                4582
+            ],
+            "Dennison": [
+                4890
+            ],
+            "Dodds": [
+                4819
+            ],
+            "Dorsey": [
+                4884
+            ],
+            "Elliot": [
+                5535
+            ],
+            "Emerson": [
+                4623
+            ],
+            "Flower": [
+                4752
+            ],
+            "Hahne": [
+                4754
+            ],
+            "Hamilton": [
+                4902
+            ],
+            "Havighurst": [
+                4875
+            ],
+            "Hepburn": [
+                4756
+            ],
+            "MacCracken": [
+                4823
+            ],
+            "Mary Lyon": [
+                4325
+            ],
+            "McBride": [
+                4886
+            ],
+            "McFarland": [
+                4791
+            ],
+            "McKee": [
+                4880
+            ],
+            "Minnich": [
+                4821
+            ],
+            "Morris": [
+                4620
+            ],
+            "Ogden": [
+                4894
+            ],
+            "Peabody": [
+                4898
+            ],
+            "Porter": [
+                4804
+            ],
+            "Reid": [
+                4601
+            ],
+            "Richard": [
+                4802
+            ],
+            "Scott": [
+                4892
+            ],
+            "Stanton": [
+                4708
+            ],
+            "Stoddard": [
+                5419
+            ],
+            "Swing": [
+                4800
+            ],
+            "Symmes": [
+                4882
+            ],
+            "Tappan": [
+                4706
+            ],
+            "Thomson": [
+                4900
+            ],
+            "Wells": [
+                4896
+            ],
+            "Wilson": [
+                4326
+            ]
+        }
+    },
+    "Norfolk State University": {
+        "Norfolk State Main Campus": {
+            "Spartan Station": [
+                1016225
+            ],
+            "Spartan Suites A-Wing": [
+                1016628
+            ],
+            "Spartan Suites B-Wing": [
+                1016608
+            ]
+        }
+    },
+    "Northern Illinois University": {
+        "Northern Illinois Main Campus": {
+            "Gilbert Hall": [
+                2049960
+            ],
+            "Grant North C-Tower": [
+                1014716
+            ],
+            "Grant North D-Tower": [
+                1014718
+            ],
+            "Neptune East": [
+                1014728
+            ],
+            "Neptune North": [
+                1014710
+            ],
+            "Neptune West": [
+                1014712
+            ],
+            "Stevenson North C-Tower": [
+                1014744
+            ],
+            "Stevenson North D-Tower": [
+                1014734
+            ],
+            "Stevenson South A-Tower": [
+                1014720
+            ],
+            "Stevenson South B-Tower": [
+                1014722
+            ]
+        }
+    },
+    "Ohio Northern University": {
+        "ONU Campus": {
+            "Affinity Commons": [
+                1040023
+            ]
+        }
+    },
+    "SUNY Canton": {
+        "SUNY Canton Main Campus": {
+            "Grass River": [
+                1040608
+            ],
+            "Heritage": [
+                1015364
+            ],
+            "Mohawk Hall": [
+                1015356
+            ],
+            "Rushton": [
+                1015353
+            ],
+            "Smith (Canton)": [
+                1015369
+            ]
+        }
+    },
+    "St. John's University": {
+        "Manhattan Campus": {
+            "101 Murray Street": [
+                1015825
+            ]
+        },
+        "Queens Campus": {
+            "172-14 Henley": [
+                1023291
+            ]
+        },
+        "St. John's Main Campus": {
+            "Carey": [
+                7208
+            ],
+            "Century": [
+                7210
+            ],
+            "Dasilva": [
+                7206
+            ],
+            "Donovan": [
+                7169
+            ],
+            "Hollis": [
+                7207
+            ],
+            "O'Connor": [
+                7209
+            ],
+            "Seton Apartments": [
+                1014566
+            ],
+            "St. Vincent Hall": [
+                1014384
+            ],
+            "Townhouse": [
+                1014445
+            ]
+        }
+    },
+    "Stratford Heights": {
+        "Stratford Heights": {
+            "Tower Hall": [
+                1433
+            ]
+        }
+    },
+    "The Charles Apartments - JHU": {
+        "The Charles Apartments - Johns Hopkins (good)": {
+            "The Charles Apartments (good)": [
+                1028990
+            ]
+        }
+    },
+    "U. of Advancing Technology": {
+        "U. of Advancing Techn. Tempe": {
+            "Founders Hall": [
+                1007994
+            ]
+        }
+    },
+    "University Park": {
+        "University Park": {
+            "North": [
+                1437
+            ],
+            "South-140 Calhoun": [
+                1441
+            ],
+            "South-220 Calhoun": [
+                1439
+            ]
+        }
+    },
+    "University of Cincinnati": {
+        "Cincinnati Main Campus": {
+            "C R C Hall": [
+                1435
+            ]
+        }
+    },
+    "University of Dayton": {
+        "Dayton Main Campus": {
+            "Marycrest": [
+                5587
+            ]
+        }
+    },
+    "Johns Hopkins University": {
+        "Homewood Campus": {
+            "AMR A": [
+              2829
+            ],
+            "AMR B": [
+              2831
+            ],
+            "AMR I": [
+              2824
+            ],
+            "AMR II": [
+              2826,
+              2827
+            ],
+            "Bradford Hall": [
+              2835
+            ],
+            "Charles Commons": [
+              2841
+            ],
+            "McCoy Hall": [
+              1015524,
+              1015507
+            ],
+            "Wolman Hall": [
+              2839
+            ],
+            "Rogers Hall": [
+              2074912
+            ]
+        }
+    }
+}
