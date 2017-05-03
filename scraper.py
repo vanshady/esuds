@@ -43,5 +43,14 @@ def parseEsuds(soup):
 def getWebpageSource(url):
     ua = UserAgent()
     headers = { "Connection": "close", "User-Agent": ua.random }
-    r = requests.get(url, headers = headers, timeout = 20)
+    r = ''
+    while r == '':
+        try:
+            r = requests.get(url, headers = headers, timeout = 5)
+        except:
+            print("Connection refused by the server..")
+            print(url)
+            time.sleep(5)
+            continue
+
     return BeautifulSoup(r.text, "html.parser")
