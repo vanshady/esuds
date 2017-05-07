@@ -87,22 +87,23 @@ def scrapeList(id_list, root):
                 # handle subscribers
                 subscribers = db.child(school).child(campus).child(hall).child('subscribers').get()
                 if subscribers.val():
-                    for subscriber in subscribers.each():
-                        subscriber_val = subscriber.val()
-                        print(subscriber_val.registration_id)
-                        print(subscriber_val.notify_washers)
-                        print(subscriber_val.notify_dryers)
-                        print(subscriber_val.watch_list)
-                        if subscriber_val.watch_list.val():
-                            for watch in subscriber_val.watch_list.each():
-                                print(watch.id)
-                                print(watch.type)
+                    print(subscriber.val())
+                    # for subscriber in subscribers.each():
+                    #     subscriber_val = subscriber.val()
+                    #     print(subscriber_val.registration_id)
+                    #     print(subscriber_val.notify_washers)
+                    #     print(subscriber_val.notify_dryers)
+                    #     print(subscriber_val.watch_list)
+                    #     if subscriber_val.watch_list.val():
+                    #         for watch in subscriber_val.watch_list.each():
+                    #             print(watch.id)
+                    #             print(watch.type)
         print(school + ' ends')
 def scrapeAll():
     while True:
         print('start to scrape')
-        scrapeList(asi_id, 'asi')
         scrapeList(hopkins_id, 'jhu')
+        scrapeList(asi_id, 'asi')
         print('scrape ends')
 
 # timer = threading.Timer(60.0, scrapeAll)
