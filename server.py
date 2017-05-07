@@ -144,12 +144,11 @@ class GetCampus(Resource):
 
 class GetHall(Resource):
     def get(self, school_name, campus_name, hall_name):
-        return {}
-        # try:
-        #     return all_data[school_name][campus_name][hall_name]
-        # except:
-        #     print("Unexpected error:", sys.exc_info()[0])
-        #     return {}
+        try:
+            return all_data[school_name][campus_name][hall_name]
+        except:
+            print("Unexpected error:", sys.exc_info()[0])
+            return {}
 
 class GetHallMachine(Resource):
     def get(self, school_name, campus_name, hall_name, machine_id):
