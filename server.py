@@ -87,7 +87,7 @@ def scrapeList(id_list, root):
                 # handle subscribers
                 subscribers = db.child(school).child(campus).child(hall).child('subscribers').get()
                 if subscribers.val():
-                    print(subscriber.val())
+                    print(subscribers.val())
                     # for subscriber in subscribers.each():
                     #     subscriber_val = subscriber.val()
                     #     print(subscriber_val.registration_id)
