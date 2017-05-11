@@ -82,12 +82,20 @@ def scrapeList(id_list, root):
                     machines += scrape(root, hall_id)
 
                 all_data[school][campus][hall] = machines
-                db.child(school).child(campus).child(hall).child('laundry').set(machines)
+
+                success = False
+                while success == False:
+                    try:
+                        db.child(school).child(campus).child(hall).child('laundry').set(machines)
+                        success = True
+                    except:
+                        time.sleep(5)
+                        continue
 
                 # handle subscribers
-                subscribers = db.child(school).child(campus).child(hall).child('subscribers').get()
-                if subscribers.val():
-                    print(subscribers.val())
+                # subscribers = db.child(school).child(campus).child(hall).child('subscribers').get()
+                # if subscribers.val():
+                    # print(subscribers.val())
                     # for subscriber in subscribers.each():
                     #     subscriber_val = subscriber.val()
                     #     print(subscriber_val.registration_id)
